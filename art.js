@@ -13,8 +13,8 @@
     pink:   { c: "#FF7FB6", d: "#E5568F", s: "#FFE2EF" }
   };
   const ITEM_COLOR = {
-    walker: "sun", words: "teal", elmo: "tomato", tonies: "grape", duplo: "tomato", needoh: "pink",
-    printcam: "teal", botley: "sun", echo: "grape", furblet: "pink", legopoke: "sun", snap: "teal"
+    walker: "sun", words: "teal", elmo: "tomato", tonies: "grape", echo: "grape", printcam: "teal",
+    yoshi: "pink", botley: "sun", megalodon: "teal", furblet: "pink", legopoke: "sun", snap: "tomato"
   };
   const vars = key => { const k = COLORS[key] || COLORS.sun; return `--c:${k.c};--cd:${k.d};--cs:${k.s}`; };
 
@@ -96,29 +96,33 @@
       `<path class="au-l" d="M57 30q3 2.4 6 0" stroke="${INK}" stroke-width="1.8"/>` +
       `<path class="au-k" d="M98 12.5l13-4v16.5a5 5 0 1 1-2.6-4.4V14.6l-7.8 2.4v13.2a5 5 0 1 1-2.6-4.4z"/>`,
 
-    /* LEGO DUPLO Bluey set: big generic bricks and a mud pizza slice */
-    duplo:
-      `<ellipse class="au-k" cx="60" cy="108" rx="48" ry="5" opacity=".12"/>` +
-      stud(22, 61, 15, "au-c") + stud(40, 61, 15, "au-c") +
-      `<rect class="au-c au-o" x="14" y="68" width="92" height="36" rx="6"/>` +
-      `<rect class="au-w" x="20" y="74" width="5" height="24" rx="2.5" opacity=".35"/>` +
-      stud(66, 29, 14, "au-sun") + stud(84, 29, 14, "au-sun") +
-      `<rect class="au-sun au-o" x="60" y="36" width="44" height="33" rx="6"/>` +
-      `<g transform="rotate(-10 34 46)">` +
-        `<path class="au-sun au-o" d="M18 28l34 8-22 30z"/>` +
-        `<path class="au-d au-o" d="M18 28l34 8-2.5 5-31.5-7.5z" fill="#B07A3E"/>` +
-        `<circle class="au-tom" cx="33" cy="44" r="3.4"/><circle class="au-tom" cx="40" cy="41" r="2.8"/><circle class="au-tom" cx="32" cy="53" r="2.6"/>` +
-      `</g>`,
+    /* Hatchin' Yoshi: drawn as a generic speckled egg cracking open, two eyes peeking out (not the character) */
+    yoshi:
+      `<ellipse class="au-k" cx="60" cy="109" rx="34" ry="5" opacity=".12"/>` +
+      `<path class="au-l" d="M15 70q-7 10 0 20M105 70q7 10 0 20" stroke="${INK}" stroke-width="3"/>` +
+      `<path class="au-k" d="M31 62q29-12 58 0v12H31z"/>` +
+      `<circle class="au-w" cx="51" cy="66" r="5"/><circle class="au-w" cx="69" cy="66" r="5"/>` +
+      `<circle class="au-k" cx="52.5" cy="67" r="2.4"/><circle class="au-k" cx="70.5" cy="67" r="2.4"/>` +
+      `<path class="au-w au-o" d="M29 68l8 7 8-8 8 8 7-8 7 8 8-8 8 8 7-7c2 4 3 8 3 13 0 20-15 33-31 33S29 96 29 76c0-3 0-5 0-8z"/>` +
+      `<circle class="au-c" cx="44" cy="92" r="5.5"/><circle class="au-sun" cx="68" cy="99" r="4.5"/><circle class="au-c" cx="79" cy="84" r="4"/><circle class="au-sun" cx="52" cy="104" r="3"/>` +
+      `<g transform="rotate(-18 30 52)">` +
+        `<path class="au-w au-o" d="M30 56c0-23 13-39 30-39s30 16 30 39l-7-6-8 8-8-8-7 8-7-8-8 8-8-8z"/>` +
+        `<circle class="au-c" cx="48" cy="34" r="5"/><circle class="au-sun" cx="68" cy="30" r="4"/><circle class="au-c" cx="76" cy="44" r="3.4"/>` +
+      `</g>` +
+      star(98, 22, 8, "#FFC233") + star(20, 30, 5.5, "#19B9A8"),
 
-    /* NeeDoh Nice Cube: a squishy cube mid-squeeze */
-    needoh:
-      `<ellipse class="au-k" cx="60" cy="108" rx="40" ry="5.5" opacity=".12"/>` +
-      `<path class="au-d au-o" d="M88 48l14-14c3 18 3 40 0 56l-14 14c3-18 3-38 0-56z"/>` +
-      `<path class="au-s au-o" d="M24 48c3-6 9-12 14-14 18-2 44-2 64 0l-14 14c-20-3-44-3-64 0z"/>` +
-      `<path class="au-c au-o" d="M24 48c20-3 44-3 64 0 3 18 3 38 0 56-20 3-44 3-64 0-3-18-3-38 0-56z"/>` +
-      `<path class="au-w" d="M31 56c4-1 9-1 13-1-1 9-1 17 0 27-4 0-8 0-12-1-1-8-2-16-1-25z" opacity=".42"/>` +
-      `<path class="au-l" d="M12 62q-5 14 0 28M6 68q-3 8 0 16" stroke="${INK}" stroke-width="3"/>` +
-      `<path class="au-l" d="M110 56q5 12 2 24" stroke="${INK}" stroke-width="3"/>`,
+    /* Primal Hatch Megalodon: a generic cartoon shark bursting out of a cracked egg */
+    megalodon:
+      `<ellipse class="au-k" cx="60" cy="110" rx="44" ry="5" opacity=".12"/>` +
+      `<circle class="au-w au-o" cx="16" cy="40" r="4"/><circle class="au-w au-o" cx="26" cy="26" r="3"/><circle class="au-w au-o" cx="108" cy="78" r="3.5"/>` +
+      `<path class="au-d au-o" d="M44 46L36 20l26 16z"/>` +
+      `<path class="au-c au-o" d="M22 96C24 66 42 40 70 28c14-6 28-6 38-1-2 10-6 19-13 25l-12 1 13 8c-9 12-25 21-44 25-12 3-22 6-30 10z"/>` +
+      `<path class="au-s" d="M30 94c18-6 36-12 52-26l13 0c-9 12-25 21-44 25-8 2-15 3-21 1z"/>` +
+      `<path class="au-w" d="M95 52l-3 4-3-4-3 4-3-3zM84 61l3 3 3-3 3 3 3-3z"/>` +
+      `<circle class="au-sun au-o" cx="90" cy="36" r="5.5"/><circle class="au-k" cx="91" cy="36" r="2.4"/>` +
+      `<path class="au-l" d="M64 52q-4 7 0 14M71 49q-4 7 0 14" stroke="var(--cd)" stroke-width="3"/>` +
+      `<path class="au-w au-o" d="M14 90l9 7 9-8 9 8 9-8 9 8 9-8 9 8 9-8 9 8 8-7-5 20H19z"/>` +
+      `<path class="au-l" d="M30 104h60" stroke="var(--cs)" stroke-width="3"/>`,
 
     /* VTech KidiZoom PrintCam: a chunky kid camera printing a photo */
     printcam:

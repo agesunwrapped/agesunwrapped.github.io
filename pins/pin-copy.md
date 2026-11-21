@@ -1,12 +1,12 @@
 # Ages Unwrapped: Pinterest pins
 
-Twelve ready-to-post pins. For each one: upload the image, paste the title and description, add the alt text, pick the board and paste the link as the pin's destination.
+Thirteen ready-to-post pins. For each one: upload the image, paste the title and description, add the alt text, pick the board and paste the link as the pin's destination.
 
 To make more pins later, open `pin-template.html?p=byage` (or any key in it) at 1000 × 1500 and screenshot it, or ask Claude to add one.
 
-Rules for every pin: write for parents and other grown-ups, never for kids. No prices. Every description ends with "I earn from qualifying purchases." The drawings are our own; never use character or brand artwork.
+Rules for every pin: write for parents and other grown-ups, never for kids. No prices and no deal claims. Every description ends with "I earn from qualifying purchases." The drawings are our own; never use character or brand artwork.
 
-## Boards to create first (on the @tristanyee5 account)
+## Boards (on the @tristanyee5 account, created 2026-11-21)
 
 | Board name | Board description |
 |---|---|
@@ -24,27 +24,27 @@ Rules for every pin: write for parents and other grown-ups, never for kids. No p
 - **Image:** `gift-ideas-by-age.png`
 - **Board:** Kids Gift Ideas by Age
 - **Link:** https://agesunwrapped.github.io/#picks
-- **Title:** Gift Ideas for Kids by Age, 1 to 12 (2026 Holiday Gift Guide)
-- **Description:** Gift ideas for kids 1 to 12, sorted by age: learning toys for toddlers, kid tech and coding robots for big kids, and this year's most-wanted toys. Tap your kid's age to see every pick that fits, then check out on Amazon. I earn from qualifying purchases.
+- **Title:** Tech Gift Ideas for Kids by Age, 1 to 12 (2026 Holiday Gift Guide)
+- **Description:** Tech gift ideas for kids 1 to 12, sorted by age: learning toys for toddlers, kids' cameras and coding robots for big kids, and this Christmas's hottest interactive toys. Tap your kid's age to see every pick that fits, then check out on Amazon. I earn from qualifying purchases.
 - **Alt text:** Twelve wrapped gift boxes numbered 1 to 12 on three shelves, for a gift guide sorted by age.
 
-## 2. Gifts for 1 and 2 year olds
+## 2. Gifts for 2 and 3 year olds
 
-- **Image:** `gifts-1-and-2-year-olds.png`
+- **Image:** `gifts-2-and-3-year-olds.png`
 - **Board:** Toddler Gift Ideas
-- **Link:** https://agesunwrapped.github.io/#age-2
-- **Title:** Gifts for 1 and 2 Year Olds: Learning Toys and Big Giggles
-- **Description:** Toddler gift ideas for 1 and 2 year olds: the VTech Sit-to-Stand Learning Walker, the LeapFrog 100 Words Book, Tickle Me Elmo Giggle Max, a Toniebox Lite and a LEGO DUPLO Bluey set. Every pick shows the maker's age. I earn from qualifying purchases.
-- **Alt text:** Five illustrated toddler gifts with their ages: a learning walker, a talking word book, a giggling plush, a screen-free audio player and big building bricks.
+- **Link:** https://agesunwrapped.github.io/#age-3
+- **Title:** Gifts for 2 and 3 Year Olds: Learning Toys and Big Giggles
+- **Description:** Toddler gift ideas for 2 and 3 year olds: the VTech Sit-to-Stand Learning Walker, the LeapFrog 100 Words Book, Tickle Me Elmo Giggle Max, a Toniebox Lite and Echo Pop Kids. Every pick shows the maker's age. I earn from qualifying purchases.
+- **Alt text:** Five illustrated toddler gifts with their ages: a learning walker, a talking word book, a giggling plush, a screen-free audio player and a kids' smart speaker.
 
 ## 3. Gifts for kids 4 to 8
 
 - **Image:** `gifts-kids-4-to-8.png`
 - **Board:** Gift Ideas for Kids 4 to 8
 - **Link:** https://agesunwrapped.github.io/#age-6
-- **Title:** Gifts for Kids 4 to 8: Kid Tech, Coding and Building
-- **Description:** Gift ideas for kids 4 to 8: the KidiZoom PrintCam instant print camera, the Botley 2.0 coding robot, LEGO Pokémon SMART Play, a Toniebox Lite, Echo Pop Kids and a NeeDoh Nice Cube. Tap an age to see what fits. I earn from qualifying purchases.
-- **Alt text:** Six illustrated gifts for kids 4 to 8 with their ages: a kids' instant print camera, a coding robot, a LEGO set, an audio player, a kids' smart speaker and a squish cube.
+- **Title:** Gifts for Kids 4 to 8: Kid Tech, Coding and This Year's Hits
+- **Description:** Tech gift ideas for kids 4 to 8: the KidiZoom PrintCam, the Botley 2.0 coding robot, Hatchin' Yoshi, the Primal Hatch Megalodon, LEGO Pokémon SMART Play and Echo Pop Kids. Tap an age to see what fits. I earn from qualifying purchases.
+- **Alt text:** Six illustrated gifts for kids 4 to 8 with their ages: a kids' instant print camera, a coding robot, a hatching egg toy, a hatching shark toy, a LEGO set and a kids' smart speaker.
 
 ## 4. Gifts for 9 to 12 year olds
 
@@ -52,26 +52,26 @@ Rules for every pin: write for parents and other grown-ups, never for kids. No p
 - **Board:** Tween Gift Ideas
 - **Link:** https://agesunwrapped.github.io/#age-10
 - **Title:** Gifts for 9 to 12 Year Olds They'll Actually Use
-- **Description:** Tween gift ideas for ages 9 to 12: Snap Circuits Jr., LEGO Pokémon SMART Play, a KPop Demon Hunters Furblet, Echo Pop Kids and a NeeDoh Nice Cube. Gifts for the kid who wants what their friends have. I earn from qualifying purchases.
-- **Alt text:** Five illustrated gifts for kids 9 to 12 with their ages: an electronics kit, a LEGO set, a mini plush keychain, a kids' smart speaker and a squish cube.
+- **Description:** Tween gift ideas for ages 9 to 12: Snap Circuits Jr., LEGO Pokémon SMART Play, a KPop Demon Hunters Furblet, Echo Pop Kids and the Primal Hatch Megalodon. Gifts for the kid who wants what their friends have. I earn from qualifying purchases.
+- **Alt text:** Five illustrated gifts for kids 9 to 12 with their ages: an electronics kit, a LEGO set, a mini plush keychain, a kids' smart speaker and a hatching shark toy.
 
 ## 5. STEM gifts for kids
 
 - **Image:** `stem-gifts-for-kids.png`
 - **Board:** STEM Gifts for Kids
 - **Link:** https://agesunwrapped.github.io/#picks
-- **Title:** STEM Gifts Kids Actually Play With (Ages 2 to 12)
-- **Description:** STEM gift ideas sorted by age: LEGO DUPLO for toddlers, the KidiZoom PrintCam and Botley 2.0 coding robot for younger kids, and Snap Circuits Jr. and LEGO Pokémon SMART Play for older kids. Building, coding and circuits. I earn from qualifying purchases.
-- **Alt text:** Five illustrated STEM gifts with their ages: an electronics kit, a coding robot, a LEGO set, a kids' camera and big building bricks.
+- **Title:** STEM Gifts Kids Actually Play With (Ages 4 to 12)
+- **Description:** STEM gift ideas sorted by age: the KidiZoom PrintCam and Botley 2.0 coding robot for younger kids, and Snap Circuits Jr. and LEGO Pokémon SMART Play for older kids. Building, coding and circuits. I earn from qualifying purchases.
+- **Alt text:** Four illustrated STEM gifts with their ages: an electronics kit, a coding robot, a LEGO set and a kids' camera.
 
 ## 6. Hot toys of 2026
 
 - **Image:** `hot-toys-2026.png`
 - **Board:** Kids Gift Ideas by Age
 - **Link:** https://agesunwrapped.github.io/#picks
-- **Title:** Hot Toys 2026: What Kids Are Asking For This Year
-- **Description:** The hot toys of 2026: Tickle Me Elmo Giggle Max, KPop Demon Hunters Furblets, the first LEGO Pokémon sets, NeeDoh Nice Cubes, the Toniebox Lite and LEGO DUPLO Bluey. Shop them by age, from toddlers to tweens. I earn from qualifying purchases.
-- **Alt text:** Six illustrated trending toys with their ages: a giggling plush, a mini plush keychain, a LEGO set, a squish cube, an audio player and big building bricks.
+- **Title:** Hot Toys 2026: What Kids Are Asking For This Christmas
+- **Description:** The hot toys of 2026: Tickle Me Elmo Giggle Max, the Primal Hatch Megalodon, Hatchin' Yoshi, the first LEGO Pokémon sets, KPop Demon Hunters Furblets and the Toniebox Lite. Shop them by age, from toddlers to tweens. I earn from qualifying purchases.
+- **Alt text:** Six illustrated trending toys with their ages: a giggling plush, a hatching shark toy, a hatching egg toy, a LEGO set, a mini plush keychain and an audio player.
 
 ## 7. Tech gift checks
 
@@ -123,6 +123,15 @@ Rules for every pin: write for parents and other grown-ups, never for kids. No p
 - **Image:** `screen-free-tech-gifts.png`
 - **Board:** STEM Gifts for Kids
 - **Link:** https://agesunwrapped.github.io/#bundle-screen-free
-- **Title:** Screen-Free Tech Gifts for Kids: Audio, Coding and Circuits
-- **Description:** Screen-free tech gifts kids love: the Toniebox Lite for stories and songs, the Botley 2.0 coding robot, LEGO Pokémon SMART Play and Snap Circuits Jr. Check the box for batteries and cables before you wrap. I earn from qualifying purchases.
-- **Alt text:** Four illustrated screen-free tech gifts with their ages: an audio player, a coding robot, a LEGO set and an electronics kit.
+- **Title:** Screen-Free Tech Gifts for Kids: Audio, Coding and Hatching Toys
+- **Description:** Screen-free tech gifts kids love: the Toniebox Lite for stories and songs, the Botley 2.0 coding robot, Hatchin' Yoshi and the Primal Hatch Megalodon. Check the box for batteries and cables before you wrap. I earn from qualifying purchases.
+- **Alt text:** Four illustrated screen-free tech gifts with their ages: an audio player, a coding robot, a hatching egg toy and a hatching shark toy.
+
+## 13. Cyber Week kid tech gifts
+
+- **Image:** `cyber-week-kid-tech-gifts.png`
+- **Board:** Kids Gift Ideas by Age
+- **Link:** https://agesunwrapped.github.io/#picks
+- **Title:** Black Friday and Cyber Monday: 6 Kid Tech Gifts to Grab This Week
+- **Description:** Shopping Black Friday and Cyber Monday for the kids? Six tech gifts to look at first: Echo Pop Kids, the KidiZoom PrintCam, a Toniebox Lite, LEGO Pokémon SMART Play, the Primal Hatch Megalodon and Tickle Me Elmo Giggle Max. Prices change fast, so check today's price on Amazon. I earn from qualifying purchases.
+- **Alt text:** Six illustrated kid tech gifts with their ages: a kids' smart speaker, an instant print camera, an audio player, a LEGO set, a hatching shark toy and a giggling plush.

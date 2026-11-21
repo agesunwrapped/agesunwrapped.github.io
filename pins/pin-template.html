@@ -82,8 +82,8 @@ h1 .tagged{display:inline-block;margin-top:14px;padding:0 .14em .08em;background
 const CHECK = '<svg viewBox="0 0 36 36"><path d="M8 19l7 7 13-15" fill="none" stroke="#241B35" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/></svg>';
 const T = { /* short names and ages for gift tiles */
   walker: ["Sit-to-Stand Walker", "9 mo+"], words: ["100 Words Book", "18 mo+"], elmo: ["Tickle Me Elmo Giggle Max", "18 mo+"],
-  tonies: ["Toniebox Lite", "Ages 1+"], duplo: ["LEGO DUPLO Bluey set", "Ages 2+"], needoh: ["NeeDoh Nice Cube", "Ages 3+"],
-  printcam: ["KidiZoom PrintCam", "Ages 4+"], botley: ["Botley 2.0 coding robot", "Ages 5+"], echo: ["Echo Pop Kids", "Ages 3 to 12"],
+  tonies: ["Toniebox Lite", "Ages 1+"], echo: ["Echo Pop Kids", "Ages 3 to 12"], printcam: ["KidiZoom PrintCam", "Ages 4+"],
+  yoshi: ["Hatchin' Yoshi", "Ages 5+"], botley: ["Botley 2.0 coding robot", "Ages 5+"], megalodon: ["Primal Hatch Megalodon", "Ages 5+"],
   furblet: ["KPop Demon Hunters Furblet", "Ages 6+"], legopoke: ["LEGO Pokémon SMART Play", "Ages 6+"], snap: ["Snap Circuits Jr.", "Ages 8+"]
 };
 const ICON = {
@@ -95,17 +95,19 @@ const ICON = {
 
 const PINS = {
   byage: { label: "Gift guide", eyebrow: "Holiday 2026 · ages 1 to 12", title: ["Gift ideas", "!by age"], hs: 150, type: "boxes", tint: "#FFE1D8",
-    note: "Toys, kid tech and STEM picks for every age.", cta: "Tap an age to shop" },
-  toddler: { label: "Ages 1 & 2", eyebrow: "Learning toys and big giggles", title: ["Gifts for 1 and", "!2 year olds"], hs: 118, type: "gifts", tint: "#FFF1C9",
-    tiles: ["walker", "words", "elmo", "tonies", "duplo"], cta: "See every pick for age 2" },
-  kids48: { label: "Ages 4 to 8", eyebrow: "Kid tech, coding and building", title: ["Gifts for kids", "!4 to 8"], hs: 132, type: "gifts", tint: "#D3F4EF", tag: "#19B9A8",
-    tiles: ["printcam", "botley", "legopoke", "tonies", "echo", "needoh"], cta: "See the picks by age" },
+    note: "Smart toys, kid tech and STEM picks for every age.", cta: "Tap an age to shop" },
+  toddler: { label: "Ages 2 & 3", eyebrow: "Learning toys and big giggles", title: ["Gifts for 2 and", "!3 year olds"], hs: 118, type: "gifts", tint: "#FFF1C9",
+    tiles: ["walker", "words", "elmo", "tonies", "echo"], cta: "See every pick for age 3" },
+  kids48: { label: "Ages 4 to 8", eyebrow: "Kid tech, coding and this year's hits", title: ["Gifts for kids", "!4 to 8"], hs: 132, type: "gifts", tint: "#D3F4EF", tag: "#19B9A8",
+    tiles: ["printcam", "botley", "yoshi", "megalodon", "legopoke", "echo"], cta: "See the picks by age" },
   tween: { label: "Ages 9 to 12", eyebrow: "For kids who want what their friends have", title: ["Gifts for", "!9 to 12 year olds"], hs: 112, type: "gifts", tint: "#E7E1FF", tag: "#7B61FF",
-    tiles: ["snap", "legopoke", "furblet", "echo", "needoh"], cta: "See every pick for age 10" },
-  stem: { label: "STEM gifts", eyebrow: "Building, coding and circuits", title: ["STEM gifts kids", "!actually play with"], hs: 104, type: "gifts", tint: "#D3F4EF", tag: "#19B9A8",
-    tiles: ["snap", "botley", "legopoke", "printcam", "duplo"], cta: "Shop STEM gifts by age" },
-  hot: { label: "Hot toys", eyebrow: "What kids are asking for this year", title: ["The hot toys", "!of 2026"], hs: 132, type: "gifts", tint: "#FFE2EF", tag: "#FF5B3A",
-    tiles: ["elmo", "furblet", "legopoke", "needoh", "tonies", "duplo"], cta: "Shop them by age" },
+    tiles: ["snap", "legopoke", "furblet", "echo", "megalodon"], cta: "See every pick for age 10" },
+  stem: { label: "STEM gifts", eyebrow: "Building, coding and circuits", title: ["STEM gifts kids", "!actually play with"], hs: 104, type: "gifts4", tint: "#D3F4EF", tag: "#19B9A8",
+    tiles: ["snap", "botley", "legopoke", "printcam"], cta: "Shop STEM gifts by age" },
+  hot: { label: "Hot toys", eyebrow: "What kids are asking for this Christmas", title: ["The hot toys", "!of 2026"], hs: 132, type: "gifts", tint: "#FFE2EF", tag: "#FF5B3A",
+    tiles: ["elmo", "megalodon", "yoshi", "legopoke", "furblet", "tonies"], cta: "Shop them by age" },
+  cyberweek: { label: "Cyber Week", eyebrow: "Shopping Black Friday and Cyber Monday?", title: ["Kid tech gifts", "!to grab this week"], hs: 112, type: "gifts", tint: "#FFF1C9", tag: "#FF5B3A",
+    tiles: ["echo", "printcam", "tonies", "legopoke", "megalodon", "elmo"], note: "Prices and stock change fast. Check today's price on Amazon.", cta: "Shop them by age" },
   setup: { label: "Tech gifts", eyebrow: "Do this before you wrap it", title: ["Tech gift?", "!4 checks first"], hs: 128, type: "rows", tint: "#D3F4EF", tag: "#19B9A8", mark: "check",
     rows: [["Check what's not in the box", "Some gifts need a USB-C cable or batteries that aren't included."], ["Charge it the night before", "And get apps and updates on your own Wi-Fi."], ["Set parental controls first", "Time limits and content filters, before it's unwrapped."], ["Turn off try-me mode", "Some toys ship in demo mode. Look for a tab or wire."]],
     cta: "Read the setup guide" },
@@ -119,7 +121,7 @@ const PINS = {
   firstbday: { label: "First birthday", eyebrow: "For turning one", title: ["First birthday", "!gift ideas"], hs: 122, type: "gifts4", tint: "#FFE1D8",
     tiles: ["walker", "words", "elmo", "tonies"], cta: "See the First Birthday Box" },
   screenfree: { label: "Screen-free", eyebrow: "Tech they'll love, no screen needed", title: ["Screen-free", "!tech gifts"], hs: 136, type: "gifts4", tint: "#E7E1FF", tag: "#7B61FF",
-    tiles: ["tonies", "botley", "legopoke", "snap"], note: "Check the box for batteries and cables before you wrap.", cta: "See the Screen-Free Kit" }
+    tiles: ["tonies", "botley", "yoshi", "megalodon"], note: "Check the box for batteries and cables before you wrap.", cta: "See the Screen-Free Kit" }
 };
 
 const key = new URLSearchParams(location.search).get("p") || "byage";
