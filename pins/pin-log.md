@@ -38,6 +38,11 @@ Slots (Eastern): Sunday 10:00 AM and 2:00 PM, Tuesday 8:00 PM, Thursday 8:00 PM.
 
 | Date | Image | Title | Board | Link |
 |---|---|---|---|---|
+| 2026-11-21 | gift-ideas-by-age.png | Tech Gift Ideas for Kids by Age, 1 to 12 (2026 Holiday Gift Guide) | Kids Gift Ideas by Age | #picks |
+| 2026-11-21 | hot-toys-2026.png | Hot Toys 2026: What Kids Are Asking For This Christmas | Kids Gift Ideas by Age | #picks |
+| 2026-11-21 | gifts-2-and-3-year-olds.png | Gifts for 2 and 3 Year Olds: Learning Toys and Big Giggles | Toddler Gift Ideas | #age-3 |
+| 2026-11-21 | gifts-kids-4-to-8.png | Gifts for Kids 4 to 8: Kid Tech, Coding and This Year's Hits | Gift Ideas for Kids 4 to 8 | #age-6 |
+| 2026-11-21 | gifts-9-to-12-year-olds.png | Gifts for 9 to 12 Year Olds They'll Actually Use | Tween Gift Ideas | #age-10 |
 
 ## Scheduled in Pinterest
 
@@ -48,7 +53,16 @@ Pins scheduled with Pinterest's "Publish at a later date". Pinterest publishes t
 
 ## Ready, not posted
 
-The first set of 13 pins is rendered in this folder, with full copy in `pin-copy.md`.
+These 8 are rendered in this folder, with their full copy (title, description, alt text, board, link) in `pin-copy.md`. Use them in this order for the next empty Ages Unwrapped slots before making new ones. The STEM pin may also be sitting half-filled in Pinterest's Pin drafts from 2026-11-21; ignore or delete that draft.
+
+1. stem-gifts-for-kids.png (pin-copy #5)
+2. gift-finder-quiz.png (#9)
+3. tech-gift-checks.png (#7)
+4. cyber-week-kid-tech-gifts.png (#13): best on Thu 11/26 8 PM, before Black Friday
+5. screen-free-tech-gifts.png (#12)
+6. first-birthday-gift-ideas.png (#11)
+7. toy-safety-checks.png (#8)
+8. four-gift-rule.png (#10)
 
 ## Topic backlog
 
