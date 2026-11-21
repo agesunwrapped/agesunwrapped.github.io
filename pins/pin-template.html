@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Ages Unwrapped pin</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,400..800&family=Figtree:wght@400..800&display=block">
+<script src="../art.js"></script>
+<style>
+/* Renders one 1000 x 1500 pin. Open pin-template.html?p=<key> and screenshot it at 1000 x 1500. */
+:root{--paper:#FFFCF5;--ink:#241B35;--ink-2:#4A4060;--muted:#675E7E;--tomato:#FF5B3A;--sun:#FFC233;--teal:#19B9A8;--grape:#7B61FF;--pink:#FF7FB6;
+  --display:"Bricolage Grotesque",Arial,sans-serif;--body:Figtree,Arial,sans-serif}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:1000px;height:1500px;overflow:hidden;background:var(--paper)}
+body{font-family:var(--body);color:var(--ink);-webkit-font-smoothing:antialiased}
+.pin{position:relative;width:1000px;height:1500px;display:flex;flex-direction:column;padding:56px 64px 0;overflow:hidden;isolation:isolate;
+  background-image:linear-gradient(rgba(36,27,53,.055) 2px,transparent 2px),linear-gradient(90deg,rgba(36,27,53,.055) 2px,transparent 2px);background-size:34px 34px}
+.blob{position:absolute;z-index:-1;right:-200px;top:-270px;width:540px;height:540px;border-radius:50%;background:var(--tint,#FFF1C9);border:4px solid var(--ink)}
+.head{display:flex;justify-content:space-between;align-items:center}
+.brand{display:flex;align-items:center;gap:14px;font:800 40px/1 var(--display);font-variation-settings:"wdth" 84;letter-spacing:-.025em}
+.brand b{color:var(--tomato)}
+.brand svg{width:64px;height:64px;overflow:visible}
+.label{padding:14px 22px;border:3px solid var(--ink);border-radius:999px;background:#fff;font:700 20px/1 var(--body);letter-spacing:.12em;text-transform:uppercase}
+.eyebrow{margin-top:64px;max-width:600px;font:700 25px/1.3 var(--body);letter-spacing:.14em;text-transform:uppercase;color:var(--ink-2)}
+h1{margin-top:18px;font:800 var(--hs,124px)/.95 var(--display);font-variation-settings:"wdth" 80;letter-spacing:-.025em;word-spacing:.05em}
+h1 span{display:block}
+h1 .tagged{display:inline-block;margin-top:14px;padding:0 .14em .08em;background:var(--tag,var(--tomato));color:#fff;border:5px solid var(--ink);border-radius:.13em;box-shadow:9px 9px 0 var(--ink);transform:rotate(-2deg)}
+.body{flex:1;min-height:0;display:flex;flex-direction:column;justify-content:center;gap:22px;padding:40px 0 34px}
+.note{font:600 26px/1.4 var(--body);color:var(--ink-2);text-align:center}
+.foot{flex:none;margin:0 -64px;padding:36px 64px 44px;background:var(--ink);color:#fff;display:flex;justify-content:space-between;align-items:center;gap:24px}
+.cta{font:800 44px/1.05 var(--display);font-variation-settings:"wdth" 84;letter-spacing:-.02em;color:var(--sun)}
+.url{flex:none;padding:16px 24px;border:3px solid #fff;border-radius:999px;background:var(--sun);color:var(--ink);font:700 24px/1 var(--body)}
+
+/* Gift tiles */
+.tiles{display:flex;flex-wrap:wrap;justify-content:center;gap:22px}
+.gift{width:268px;display:flex;flex-direction:column;align-items:center;gap:8px;padding:16px 14px 18px;background:#fff;border:4px solid var(--ink);border-radius:26px;box-shadow:7px 7px 0 var(--c)}
+.tiles--4 .gift{width:395px;flex-direction:row;gap:18px;padding:16px 18px;justify-content:flex-start}
+.gift .pic{width:200px;height:170px;display:grid;place-items:center;background:var(--cs);border:3px solid var(--ink);border-radius:18px}
+.tiles--4 .gift .pic{flex:none;width:150px;height:150px}
+.gift .art{width:136px;height:136px}
+.tiles--4 .gift .art{width:118px;height:118px}
+.gift b{font:800 27px/1.1 var(--display);font-variation-settings:"wdth" 86;letter-spacing:-.015em;text-align:center}
+.tiles--4 .gift b{text-align:left}
+.gift i{font:700 19px/1 var(--body);font-style:normal;padding:7px 12px;border:2.5px solid var(--ink);border-radius:8px 14px 14px 8px;background:var(--paper)}
+.gift div{display:grid;gap:10px;justify-items:center}
+.tiles--4 .gift div{gap:12px;justify-items:start}
+
+/* Numbered boxes */
+.boxes{display:grid;gap:26px}
+.shelf{display:grid;grid-template-columns:repeat(4,1fr);gap:26px;align-items:end;padding:0 18px;border-bottom:9px solid var(--ink);border-radius:0 0 6px 6px}
+.shelf svg{width:100%;height:auto}
+
+/* Rows */
+.rows{display:grid;gap:18px}
+.row{display:flex;gap:22px;align-items:center;padding:22px 26px;background:#fff;border:4px solid var(--ink);border-radius:24px;box-shadow:6px 6px 0 var(--c,var(--sun))}
+.mk{flex:none;display:grid;place-items:center;width:70px;height:70px;border:3.5px solid var(--ink);border-radius:18px;background:var(--c,var(--sun));font:800 36px/1 var(--display)}
+.mk svg{width:36px;height:36px}
+.row b{display:block;font:800 33px/1.12 var(--display);font-variation-settings:"wdth" 88;letter-spacing:-.015em}
+.row span{display:block;margin-top:6px;font-size:25px;line-height:1.36;color:var(--ink-2)}
+
+/* Gift finder preview */
+.qs{display:grid;gap:20px}
+.q{padding:22px 26px 26px;background:#fff;border:4px solid var(--ink);border-radius:24px;box-shadow:6px 6px 0 var(--ink)}
+.q p{display:flex;align-items:center;gap:14px;font:800 32px/1.1 var(--display);font-variation-settings:"wdth" 88}
+.q p i{display:grid;place-items:center;width:44px;height:44px;border:3px solid var(--ink);border-radius:12px;background:var(--tomato);color:#fff;font-style:normal;font-size:24px}
+.chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px}
+.chips span{padding:11px 18px;border:3px solid var(--ink);border-radius:999px;background:var(--paper);font:600 22px/1 var(--body)}
+.chips span.on{background:var(--ink);color:#fff}
+.chips--age span{min-width:54px;text-align:center;border-radius:12px;font:800 24px/1 var(--display)}
+
+/* Four-gift rule */
+.rule{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.rule div{display:grid;justify-items:center;gap:10px;padding:26px 20px 28px;background:#fff;border:4px solid var(--ink);border-radius:26px;box-shadow:7px 7px 0 var(--c)}
+.rule svg{width:96px;height:96px}
+.rule small{font:700 21px/1 var(--body);letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.rule b{font:800 46px/1 var(--display);font-variation-settings:"wdth" 84;letter-spacing:-.02em}
+</style>
+</head>
+<body>
+<div id="defs"></div>
+<div class="pin" id="pin"></div>
+<script>
+const CHECK = '<svg viewBox="0 0 36 36"><path d="M8 19l7 7 13-15" fill="none" stroke="#241B35" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+const T = { /* short names and ages for gift tiles */
+  walker: ["Sit-to-Stand Walker", "9 mo+"], words: ["100 Words Book", "18 mo+"], elmo: ["Tickle Me Elmo Giggle Max", "18 mo+"],
+  tonies: ["Toniebox Lite", "Ages 1+"], duplo: ["LEGO DUPLO Bluey set", "Ages 2+"], needoh: ["NeeDoh Nice Cube", "Ages 3+"],
+  printcam: ["KidiZoom PrintCam", "Ages 4+"], botley: ["Botley 2.0 coding robot", "Ages 5+"], echo: ["Echo Pop Kids", "Ages 3 to 12"],
+  furblet: ["KPop Demon Hunters Furblet", "Ages 6+"], legopoke: ["LEGO Pokémon SMART Play", "Ages 6+"], snap: ["Snap Circuits Jr.", "Ages 8+"]
+};
+const ICON = {
+  star: '<svg viewBox="0 0 96 96"><path d="M48 8l11 25 27 3-20 18 6 27-24-14-24 14 6-27-20-18 27-3z" fill="#FFC233" stroke="#241B35" stroke-width="5" stroke-linejoin="round"/></svg>',
+  check: '<svg viewBox="0 0 96 96"><rect x="10" y="10" width="76" height="76" rx="18" fill="#19B9A8" stroke="#241B35" stroke-width="5"/><path d="M28 50l14 14 26-30" fill="none" stroke="#fff" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/></svg>',
+  shirt: '<svg viewBox="0 0 96 96"><path d="M34 12l14 9 14-9 26 14-9 20-11-5v43H28V41l-11 5-9-20z" fill="#FF7FB6" stroke="#241B35" stroke-width="5" stroke-linejoin="round"/></svg>',
+  book: '<svg viewBox="0 0 96 96"><path d="M10 20q19-7 38 3v58q-19-10-38-3z" fill="#fff" stroke="#241B35" stroke-width="5" stroke-linejoin="round"/><path d="M86 20q-19-7-38 3v58q19-10 38-3z" fill="#7B61FF" stroke="#241B35" stroke-width="5" stroke-linejoin="round"/></svg>'
+};
+
+const PINS = {
+  byage: { label: "Gift guide", eyebrow: "Holiday 2026 · ages 1 to 12", title: ["Gift ideas", "!by age"], hs: 150, type: "boxes", tint: "#FFE1D8",
+    note: "Toys, kid tech and STEM picks for every age.", cta: "Tap an age to shop" },
+  toddler: { label: "Ages 1 & 2", eyebrow: "Learning toys and big giggles", title: ["Gifts for 1 and", "!2 year olds"], hs: 118, type: "gifts", tint: "#FFF1C9",
+    tiles: ["walker", "words", "elmo", "tonies", "duplo"], cta: "See every pick for age 2" },
+  kids48: { label: "Ages 4 to 8", eyebrow: "Kid tech, coding and building", title: ["Gifts for kids", "!4 to 8"], hs: 132, type: "gifts", tint: "#D3F4EF", tag: "#19B9A8",
+    tiles: ["printcam", "botley", "legopoke", "tonies", "echo", "needoh"], cta: "See the picks by age" },
+  tween: { label: "Ages 9 to 12", eyebrow: "For kids who want what their friends have", title: ["Gifts for", "!9 to 12 year olds"], hs: 112, type: "gifts", tint: "#E7E1FF", tag: "#7B61FF",
+    tiles: ["snap", "legopoke", "furblet", "echo", "needoh"], cta: "See every pick for age 10" },
+  stem: { label: "STEM gifts", eyebrow: "Building, coding and circuits", title: ["STEM gifts kids", "!actually play with"], hs: 104, type: "gifts", tint: "#D3F4EF", tag: "#19B9A8",
+    tiles: ["snap", "botley", "legopoke", "printcam", "duplo"], cta: "Shop STEM gifts by age" },
+  hot: { label: "Hot toys", eyebrow: "What kids are asking for this year", title: ["The hot toys", "!of 2026"], hs: 132, type: "gifts", tint: "#FFE2EF", tag: "#FF5B3A",
+    tiles: ["elmo", "furblet", "legopoke", "needoh", "tonies", "duplo"], cta: "Shop them by age" },
+  setup: { label: "Tech gifts", eyebrow: "Do this before you wrap it", title: ["Tech gift?", "!4 checks first"], hs: 128, type: "rows", tint: "#D3F4EF", tag: "#19B9A8", mark: "check",
+    rows: [["Check what's not in the box", "Some gifts need a USB-C cable or batteries that aren't included."], ["Charge it the night before", "And get apps and updates on your own Wi-Fi."], ["Set parental controls first", "Time limits and content filters, before it's unwrapped."], ["Turn off try-me mode", "Some toys ship in demo mode. Look for a tab or wire."]],
+    cta: "Read the setup guide" },
+  safety: { label: "Toy safety", eyebrow: "Check the box, not just the bow", title: ["Toy safety:", "!3 quick checks"], hs: 124, type: "rows", tint: "#FFF1C9", tag: "#FF5B3A",
+    rows: [["Small parts and under-3s", "If a piece fits through a toilet paper tube, it's too small for a child under 3."], ["Button batteries", "The battery door should need a screwdriver. Keep spares up high."], ["Big kids' small pieces", "Store LEGO and other small-piece sets where little siblings can't reach."]],
+    note: "When in doubt, go by the age on the box.", cta: "Read the safety guide" },
+  finder: { label: "Gift finder", eyebrow: "Stuck on what to get?", title: ["3 questions,", "!4 gift ideas"], hs: 128, type: "quiz", tint: "#FFF1C9", tag: "#7B61FF",
+    cta: "Take the gift finder" },
+  fourgift: { label: "Fewer, better", eyebrow: "A simple rule for holiday shopping", title: ["The four-gift", "!rule"], hs: 136, type: "rule", tint: "#FFE2EF", tag: "#FF7FB6",
+    note: "Relatives asking what to get? Send them your list.", cta: "Read the guide" },
+  firstbday: { label: "First birthday", eyebrow: "For turning one", title: ["First birthday", "!gift ideas"], hs: 122, type: "gifts4", tint: "#FFE1D8",
+    tiles: ["walker", "words", "elmo", "tonies"], cta: "See the First Birthday Box" },
+  screenfree: { label: "Screen-free", eyebrow: "Tech they'll love, no screen needed", title: ["Screen-free", "!tech gifts"], hs: 136, type: "gifts4", tint: "#E7E1FF", tag: "#7B61FF",
+    tiles: ["tonies", "botley", "legopoke", "snap"], note: "Check the box for batteries and cables before you wrap.", cta: "See the Screen-Free Kit" }
+};
+
+const key = new URLSearchParams(location.search).get("p") || "byage";
+const p = PINS[key];
+const root = document.documentElement.style;
+if (p.hs) root.setProperty("--hs", p.hs + "px");
+if (p.tint) root.setProperty("--tint", p.tint);
+if (p.tag) root.setProperty("--tag", p.tag);
+const css = document.createElement("style");
+css.textContent = AU.ART_CSS + ".art__g{filter:url(#au-sticker)}";
+document.head.append(css);
+document.getElementById("defs").innerHTML = AU.DEFS;
+
+const title = p.title.map(t => t[0] === "!" ? `<span><span class="tagged">${t.slice(1)}</span></span>` : `<span>${t}</span>`).join("");
+const tile = id => `<div class="gift" style="${AU.vars(AU.ITEM_COLOR[id])}"><span class="pic">${AU.art(id)}</span><div><b>${T[id][0]}</b><i>${T[id][1]}</i></div></div>`;
+const rowColors = ["#FFC233", "#19B9A8", "#FF7FB6", "#7B61FF"];
+let body = "";
+if (p.type === "gifts") body = `<div class="tiles">${p.tiles.map(tile).join("")}</div>`;
+if (p.type === "gifts4") body = `<div class="tiles tiles--4">${p.tiles.map(tile).join("")}</div>`;
+if (p.type === "boxes") body = `<div class="boxes">${[0, 1, 2].map(r => `<div class="shelf">${[1, 2, 3, 4].map(c => { const n = r * 4 + c; return `<div style="width:${(76 + n * 2)}%;margin:0 auto">${AU.box(n)}</div>`; }).join("")}</div>`).join("")}</div>`;
+if (p.type === "rows") body = `<div class="rows">${p.rows.map(([b, s], i) => `<div class="row" style="--c:${rowColors[i % 4]}"><div class="mk">${p.mark === "check" ? CHECK : i + 1}</div><div><b>${b}</b><span>${s}</span></div></div>`).join("")}</div>`;
+if (p.type === "quiz") body = `<div class="qs">
+  <div class="q"><p><i>1</i>How old are they?</p><div class="chips chips--age">${Array.from({ length: 12 }, (_, i) => `<span${i === 5 ? ' class="on"' : ""}>${i + 1}</span>`).join("")}</div></div>
+  <div class="q"><p><i>2</i>What are they into?</p><div class="chips"><span class="on">Building and making</span><span>Pretend play</span><span>Music and stories</span><span>Gadgets</span></div></div>
+  <div class="q"><p><i>3</i>What kind of gift?</p><div class="chips"><span class="on">Screen-free</span><span>Play together</span><span>Stocking stuffer</span><span>The big wow</span></div></div>
+</div>`;
+if (p.type === "rule") body = `<div class="rule">${[["star", "Something they", "Want", "#FFC233"], ["check", "Something they", "Need", "#19B9A8"], ["shirt", "Something to", "Wear", "#FF7FB6"], ["book", "Something to", "Read", "#7B61FF"]].map(([ic, s, b, c]) => `<div style="--c:${c}">${ICON[ic]}<small>${s}</small><b>${b}</b></div>`).join("")}</div>`;
+if (p.note) body += `<p class="note">${p.note}</p>`;
+document.getElementById("pin").innerHTML = `
+  <div class="blob"></div>
+  <div class="head"><div class="brand">${AU.MARK}<span>Ages <b>Unwrapped</b></span></div><div class="label">${p.label}</div></div>
+  <p class="eyebrow">${p.eyebrow}</p>
+  <h1>${title}</h1>
+  <div class="body">${body}</div>
+  <div class="foot"><div class="cta">${p.cta}</div><div class="url">agesunwrapped.github.io</div></div>`;
+</script>
+</body>
+</html>

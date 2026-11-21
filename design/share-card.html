@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Ages Unwrapped share card</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,400..800&family=Figtree:wght@400..800&display=block">
+<script src="../art.js"></script>
+<style>
+/* The link preview image (preview.png). Screenshot this page at 1200 x 630. */
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:1200px;height:630px;overflow:hidden;background:#FFFCF5}
+body{font-family:Figtree,Arial,sans-serif;color:#241B35;-webkit-font-smoothing:antialiased}
+.card{position:relative;width:1200px;height:630px;display:grid;grid-template-columns:610px 1fr;align-items:center;gap:20px;padding:0 56px 0 70px;overflow:hidden;isolation:isolate;
+  background-image:linear-gradient(rgba(36,27,53,.055) 1.5px,transparent 1.5px),linear-gradient(90deg,rgba(36,27,53,.055) 1.5px,transparent 1.5px);background-size:26px 26px}
+.card::after{content:"";position:absolute;inset:0;border:10px solid #241B35;pointer-events:none}
+.brand{display:flex;align-items:center;gap:12px;font:800 34px/1 "Bricolage Grotesque",Arial,sans-serif;font-variation-settings:"wdth" 84;letter-spacing:-.03em}
+.brand b{color:#FF5B3A}
+.brand svg{width:54px;height:54px;overflow:visible}
+h1{margin-top:30px;font:800 104px/.94 "Bricolage Grotesque",Arial,sans-serif;font-variation-settings:"wdth" 80;letter-spacing:-.03em;word-spacing:.05em}
+h1 span{display:block}
+h1 .tagged{display:inline-block;margin-top:10px;padding:0 16px 8px;background:#FF5B3A;color:#fff;border:4px solid #241B35;border-radius:14px;box-shadow:8px 8px 0 #241B35;transform:rotate(-2.5deg)}
+p{margin-top:30px;font-size:25px;line-height:1.4;color:#4A4060;max-width:520px}
+.url{display:inline-block;margin-top:24px;padding:12px 20px;border:3px solid #241B35;border-radius:999px;background:#FFC233;box-shadow:4px 4px 0 #241B35;font:700 20px/1 Figtree,Arial,sans-serif}
+.boxes{display:grid;grid-template-columns:repeat(4,1fr);gap:4px 14px;align-items:end}
+.boxes svg{width:100%;height:auto}
+.row{display:contents}
+</style>
+</head>
+<body>
+<div class="card">
+  <div>
+    <div class="brand" id="brand"></div>
+    <h1><span>Every age,</span><span><span class="tagged">unwrapped.</span></span></h1>
+    <p>Gift ideas for kids 1 to 12, sorted by age and picked for the grown-ups doing the shopping.</p>
+    <span class="url">agesunwrapped.github.io</span>
+  </div>
+  <div class="boxes" id="boxes"></div>
+</div>
+<script>
+const css = document.createElement("style");
+css.textContent = AU.ART_CSS;
+document.head.append(css);
+document.getElementById("brand").innerHTML = `${AU.MARK}<span>Ages <b>Unwrapped</b></span>`;
+document.getElementById("boxes").innerHTML = Array.from({ length: 12 }, (_, i) => `<div style="width:${(78 + i * 2).toFixed(0)}%;margin:0 auto">${AU.box(i + 1)}</div>`).join("");
+</script>
+</body>
+</html>
