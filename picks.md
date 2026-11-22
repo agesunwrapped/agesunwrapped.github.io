@@ -2,7 +2,7 @@
 
 Hot toys sell out and change listings fast. Each pick has a backup with a similar age and feel. To swap one in, change that product's `asin` (and its `spec` and `name` if they differ) in the `PRODUCTS` list in `index.html`. Before you do, open the backup's Amazon page and check it's in stock, it's the right item, and it adds to cart. Claude can't open amazon.com any more (Amazon blocks AI agents), so the owner does that check.
 
-The 12 primaries were checked by the owner on 2026-11-21, except Hatchin' Yoshi and Primal Hatch Megalodon, which were swapped in later that day for a more tech-forward lineup. The backups haven't been checked yet.
+All 12 primaries were checked by the owner: ten on 2026-11-21, and Hatchin' Yoshi and Primal Hatch Megalodon (swapped in that day for a more tech-forward lineup) on 2026-11-22. The backups haven't been checked yet.
 
 | # | Pick (id) | Primary ASIN | Maker's age | Why it's here | Backup (unchecked) |
 |---|---|---|---|---|---|
